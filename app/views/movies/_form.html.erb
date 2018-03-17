@@ -10,6 +10,10 @@
         <%= f.label :description %>
         <%= f.text_area :description, cols: 40, rows: 7 %>
       </li>
+      <li>
+        <%= f.label :genres %>
+        <%= f.collection_check_boxes(:genre_ids, Genre.all, :id, :name) %>
+      </li>
       <li class="required">
         <%= f.label :rating %>
         <%= f.text_field :rating, size: 4 %>
